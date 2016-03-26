@@ -10,7 +10,7 @@
  Target Server Version : 3008004
  File Encoding         : utf-8
 
- Date: 03/26/2016 10:13:43 AM
+ Date: 03/26/2016 10:22:17 AM
 */
 
 PRAGMA foreign_keys = false;
@@ -20,11 +20,12 @@ PRAGMA foreign_keys = false;
 -- ----------------------------
 DROP TABLE IF EXISTS "Stations";
 CREATE TABLE "Stations" (
-	 "name" varchar(128,0) NOT NULL,
-	 "lat" real(128,0),
-	 "lon" real(128,0),
+	 "uuid" char(36,0) NOT NULL,
+	 "name" varchar(128,0),
+	 "latitude" real(128,0),
+	 "longitude" real(128,0),
 	 "state" varchar(16,0),
-	PRIMARY KEY("name")
+	PRIMARY KEY("uuid")
 );
 
 PRAGMA foreign_keys = true;
