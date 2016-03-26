@@ -1,34 +1,45 @@
 /*
  Navicat Premium Data Transfer
 
- Source Server         : do_haze
- Source Server Type    : MySQL
- Source Server Version : 50173
- Source Host           : 104.236.242.31
+ Source Server         : beijing_sqlite
+ Source Server Type    : SQLite
+ Source Server Version : 3008004
  Source Database       : main
 
- Target Server Type    : MySQL
- Target Server Version : 50173
+ Target Server Type    : SQLite
+ Target Server Version : 3008004
  File Encoding         : utf-8
 
- Date: 03/23/2016 15:55:28 PM
+ Date: 03/26/2016 10:13:02 AM
 */
 
-SET NAMES utf8;
-SET FOREIGN_KEY_CHECKS = 0;
+PRAGMA foreign_keys = false;
 
 -- ----------------------------
---  Table structure for `AQI`
+--  Table structure for AQI
 -- ----------------------------
-DROP TABLE IF EXISTS `AQI`;
-CREATE TABLE `AQI` (
-  `uuid` varchar(128) NOT NULL,
-  `date` char(16) CHARACTER SET utf8 DEFAULT NULL,
-  `hour` int(8) DEFAULT NULL,
-  `type` tinytext CHARACTER SET utf8,
-  `point` tinytext CHARACTER SET utf8,
-  `value` int(128) DEFAULT NULL,
-  PRIMARY KEY (`uuid`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+DROP TABLE IF EXISTS "AQI";
+CREATE TABLE "AQI" (
+	 "uuid" char(36,0) NOT NULL,
+	 "date" char(19,0),
+	 "station" varchar(128,0),
+	 "state" varchar(16,0),
+	 "aqi" real,
+	 "so2" real,
+	 "so2_24h" real,
+	 "no2" real,
+	 "no2_24h" real,
+	 "co" real,
+	 "co_24h" real,
+	 "o3" real,
+	 "o3_24h" real,
+	 "o3_8h" real,
+	 "o3_8h_24h" real,
+	 "pm10" real,
+	 "pm10_24h" real,
+	 "pm2_5" real,
+	 "pm2_5_24h" real,
+	PRIMARY KEY("uuid")
+);
 
-SET FOREIGN_KEY_CHECKS = 1;
+PRAGMA foreign_keys = true;
