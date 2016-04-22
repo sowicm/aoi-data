@@ -1,3 +1,3 @@
-# aoi-data
+# aqi-data
 
-Automatically obtain AOI datas and import to sqlite database.
+Automatically obtain AQI datas and import to sqlite database.
